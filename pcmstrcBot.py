@@ -34,7 +34,7 @@ def sendMessage(message , chatID):
 
         print(update)
 
-        a = "asdfasdfasdfasdfasdf"
+
 
 
 def getUpdate():
@@ -43,7 +43,7 @@ def getUpdate():
         update = response.read()
 
     print(update)
-    b = "ioagoiqgpioqbgioq"
+
 
 """
     update = update[::-1]
