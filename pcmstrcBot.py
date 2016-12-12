@@ -3,10 +3,10 @@ import urllib.request
 ##------------------------VARIABLES AND DECLARATIONS------------------------##
 
 #bot token for Telegram Bot API
-botToken = "309515186:AAEK6vQS-rPR-O3ahDCYclc9e_7-MwRBZDc"
+botToken = "bot309515186:AAEK6vQS-rPR-O3ahDCYclc9e_7-MwRBZDc"
 
 #Telegram API bot website
-url = "https://api.telegram.org/bot"
+url = "https://api.telegram.org/"
 
 #Bot URL
 botURL = url + botToken
