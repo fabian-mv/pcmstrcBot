@@ -28,14 +28,17 @@ davidID = "295691591"
 ##------------------------METHODS------------------------##
 
 def sendMessage(message , chatID):
-   link = botURL + sendMessageCMD + "?chat_id=" + chatID + "&text=" + message
-   with urllib.request.urlopen(link) as response:
-      update = response.read()
+    link = botURL + sendMessageCMD + "?chat_id=" + chatID + "&text=" + message
+    with urllib.request.urlopen(link) as response:
+        update = response.read()
 
-   print(update)
+        print(update)
+
+        a = "asdfasdfasdfasdfasdf"
+
 
 def getUpdate():
-    link = botURL + getUpdateCMD
+    link = botURL + getUpdateCMD + "?limit=1000"
     with urllib.request.urlopen(link) as response:
         update = response.read()
 
