@@ -40,6 +40,7 @@ def getUpdate():
         update = response.read()
 
     print(update)
+    b = "ioagoiqgpioqbgioq"
 
 """
     update = update[::-1]
