@@ -1,5 +1,6 @@
 import urllib.request
 
+##------------------------VARIABLES AND DECLARATIONS------------------------##
 
 #bot token for Telegram Bot API
 botToken = "309515186:AAEK6vQS-rPR-O3ahDCYclc9e_7-MwRBZDc"
@@ -17,8 +18,11 @@ pcmstrcID = "-1001095327132"
 caroRodriguezID = "8869779"
 chemaID = "275473930"
 julioID = "252442498"
+joshuaID = "222735823"
+davidID = "295691591"
 
 
+##------------------------METHODS------------------------##
 
 def sendMessage(message , chatID):
    link = url + sendmessageCMD + "?chat_id=" + chatID + "&text=" + message
@@ -28,5 +32,6 @@ def sendMessage(message , chatID):
    print(update)
 
 
+##------------------------EXECUTE------------------------##
 
-sendMessage("hola" , julioID)
+sendMessage("test, you are a faggot lol" , davidID)
