@@ -8,18 +8,25 @@ botToken = "309515186:AAEK6vQS-rPR-O3ahDCYclc9e_7-MwRBZDc"
 url = "https://api.telegram.org/bot" + botToken
 
 #COMMANDS
-getMe = "/getMe"
-update = "/getupdates"
-sendmessage = "/sendmessage"
+getMeCMD = "/getMe"
+updateCMD = "/getupdates"
+sendmessageCMD = "/sendmessage"
 
 #CHAT IDs
-pcmstrc = "-1001095327132"
+pcmstrcID = "-1001095327132"
+caroRodriguezID = "8869779"
+chemaID = "275473930"
+julioID = "252442498"
 
 
 
-with urllib.request.urlopen(url + sendmessage + "?chat_id=-1001095327132&text=test") as response:
-   update = response.read()
+def sendMessage(message , chatID):
+   link = url + sendmessageCMD + "?chat_id=" + chatID + "&text=" + message
+   with urllib.request.urlopen(link) as response:
+      update = response.read()
+
+   print(update)
 
 
 
-print(update)
+sendMessage("hola" , julioID)
