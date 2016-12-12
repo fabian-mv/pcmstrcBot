@@ -6,12 +6,15 @@ import urllib.request
 botToken = "309515186:AAEK6vQS-rPR-O3ahDCYclc9e_7-MwRBZDc"
 
 #Telegram API bot website
-url = "https://api.telegram.org/bot" + botToken
+url = "https://api.telegram.org/bot"
+
+#Bot URL
+botURL = url + botToken
 
 #COMMANDS
 getMeCMD = "/getMe"
-updateCMD = "/getupdates"
-sendmessageCMD = "/sendmessage"
+getUpdateCMD = "/getupdates"
+sendMessageCMD = "/sendmessage"
 
 #CHAT IDs
 pcmstrcID = "-1001095327132"
@@ -25,13 +28,43 @@ davidID = "295691591"
 ##------------------------METHODS------------------------##
 
 def sendMessage(message , chatID):
-   link = url + sendmessageCMD + "?chat_id=" + chatID + "&text=" + message
+   link = botURL + sendMessageCMD + "?chat_id=" + chatID + "&text=" + message
    with urllib.request.urlopen(link) as response:
       update = response.read()
 
    print(update)
 
+def getUpdate():
+    link = botURL + getUpdateCMD
+    with urllib.request.urlopen(link) as response:
+        update = response.read()
+
+    print(update)
+
+"""
+    update = update[::-1]
+
+    updateLen = len(update)
+
+    for i in range(updateLen):
+        if update[i] == "d":
+            if update[i+1] == "i":
+                if update[i+2] == "_":
+                    if update[i+3] == "e":
+                        if update[i+4] == "t":
+                            update = update[i+4::-1]
+                            print(update)
+
+
+
+
+
+    print("error")
+
+"""
 
 ##------------------------EXECUTE------------------------##
 
-sendMessage("test, you are a faggot lol" , davidID)
+#sendMessage("testerino" , pcmstrcID)
+
+getUpdate()
