@@ -1,5 +1,5 @@
 import urllib.request
-import simplejson
+import json
 
 ##------------------------VARIABLES AND DECLARATIONS------------------------##
 
@@ -35,21 +35,20 @@ def sendMessage(message , chatID):
     with urllib.request.urlopen(link) as response:
         update = response.read()
 
-        print(update)
-
+    return update
 
 
 
 def getUpdate():
-    link = botURL + getUpdateCMD + "?limit=1000"
+    link = botURL + getUpdateCMD
     with urllib.request.urlopen(link) as response:
         update = response.read()
 
-
     print(update)
+    return update
 
 ##------------------------EXECUTE------------------------##
 
-sendMessage("test" , serruchoID)
+#sendMessage("U ma nigga fag" , pcmstrcID)
 
-#getUpdate()
+getUpdate()
