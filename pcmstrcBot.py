@@ -1,5 +1,6 @@
 import urllib.request
 import json
+from collections import OrderedDict
 ##------------------------VARIABLES AND DECLARATIONS------------------------##
 
 #bot token for Telegram Bot API
@@ -44,13 +45,13 @@ def getUpdate():
         update = response.read().decode('utf-8')
 
     jsonUpdate = json.loads(update)
+    print(json.dumps(jsonUpdate , sort_keys=True , indent=4))
 
-    print(jsonUpdate)
 
 
 
 ##------------------------EXECUTE------------------------##
 
-sendMessage("chema is a nigger (test)" , pcmstrcID)
+#sendMessage("chema, please program me, i will be ur sex slave" , pcmstrcID)
 
-#getUpdate()
+getUpdate()
