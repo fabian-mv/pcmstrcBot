@@ -48,7 +48,7 @@ def getUpdate():
     jsonUpdate = json.loads(update)
     listUpdate = [ [k,v] for k , v in jsonUpdate.items() ]
 
-    pp = pprint.PrettyPrinter(indent=0)
+    pp = pprint.PrettyPrinter(indent=0  )
     pp.pprint(listUpdate)
     #print(json.dumps(jsonUpdate , sort_keys=False , indent=1))
     #print(listUpdate[-1])
@@ -58,6 +58,6 @@ def getUpdate():
 
 ##------------------------EXECUTE------------------------##
 
-#sendMessage("chema, please program me, i will be ur sex slave" , pcmstrcID)
+sendMessage("shit garden" , serruchoID)
 
-getUpdate()
+#getUpdate()
