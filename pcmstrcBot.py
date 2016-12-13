@@ -35,6 +35,7 @@ def sendMessage(message , chatID):
     with urllib.request.urlopen(link) as response:
         update = response.read()
 
+    print(update)
     return update
 
 
