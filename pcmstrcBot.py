@@ -45,7 +45,11 @@ def getUpdate():
         update = response.read().decode('utf-8')
 
     jsonUpdate = json.loads(update)
-    print(json.dumps(jsonUpdate , sort_keys=False , indent=1))
+
+    listUpdate = [ [k,v] for k, v in jsonUpdate.items() ]
+
+    #print(json.dumps(jsonUpdate , sort_keys=False , indent=1))
+    print(listUpdate[-1])
 
 
 
