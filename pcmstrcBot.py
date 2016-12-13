@@ -1,5 +1,6 @@
 import urllib.request
 import json
+import pprint
 from collections import OrderedDict
 ##------------------------VARIABLES AND DECLARATIONS------------------------##
 
@@ -40,16 +41,17 @@ def sendMessage(message , chatID):
         print(jsonUpdate)
 
 def getUpdate():
-    link = botURL + getUpdateCMD + "?limit=5"
+    link = botURL + getUpdateCMD
     with urllib.request.urlopen(link) as response:
         update = response.read().decode('utf-8')
 
     jsonUpdate = json.loads(update)
-
     listUpdate = [ [k,v] for k , v in jsonUpdate.items() ]
 
+    pp = pprint.PrettyPrinter(indent=0)
+    pp.pprint(listUpdate)
     #print(json.dumps(jsonUpdate , sort_keys=False , indent=1))
-    print(listUpdate[-1])
+    #print(listUpdate[-1])
 
 
 
