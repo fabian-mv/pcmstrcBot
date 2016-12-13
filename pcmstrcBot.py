@@ -40,12 +40,12 @@ def sendMessage(message , chatID):
         print(jsonUpdate)
 
 def getUpdate():
-    link = botURL + getUpdateCMD
+    link = botURL + getUpdateCMD + "?limit=5"
     with urllib.request.urlopen(link) as response:
         update = response.read().decode('utf-8')
 
     jsonUpdate = json.loads(update)
-    print(json.dumps(jsonUpdate , sort_keys=True , indent=4))
+    print(json.dumps(jsonUpdate , sort_keys=False , indent=1))
 
 
 
