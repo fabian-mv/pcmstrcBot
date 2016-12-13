@@ -19,6 +19,7 @@ sendMessageCMD = "/sendmessage"
 
 #CHAT IDs
 pcmstrcID = "-1001095327132"
+serruchoID = "-151480946"
 
 caroRodriguezID = "8869779"
 chemaID = "275473930"
@@ -49,6 +50,6 @@ def getUpdate():
 
 ##------------------------EXECUTE------------------------##
 
-sendMessage("@MyNameI5, you are a fucking faggot, lol" , pcmstrcID)
+sendMessage("test" , serruchoID)
 
 #getUpdate()
