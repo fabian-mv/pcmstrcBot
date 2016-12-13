@@ -49,6 +49,6 @@ def getUpdate():
 
 ##------------------------EXECUTE------------------------##
 
-sendMessage("testerino" , pcmstrcID)
+sendMessage("@MyNameI5, you are a fucking faggot, lol" , pcmstrcID)
 
 #getUpdate()
