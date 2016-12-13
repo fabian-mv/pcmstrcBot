@@ -1,6 +1,5 @@
 import urllib.request
 import json
-
 ##------------------------VARIABLES AND DECLARATIONS------------------------##
 
 #bot token for Telegram Bot API
@@ -33,23 +32,25 @@ davidID = "295691591"
 def sendMessage(message , chatID):
     link = botURL + sendMessageCMD + "?chat_id=" + chatID + "&text=" + message
     with urllib.request.urlopen(link) as response:
-        update = response.read()
+        update = response.read().decode('utf-8')
 
-    print(update)
-    return update
+        jsonUpdate = json.loads(update)
 
-
+        print(jsonUpdate)
 
 def getUpdate():
     link = botURL + getUpdateCMD
     with urllib.request.urlopen(link) as response:
-        update = response.read()
+        update = response.read().decode('utf-8')
 
-    print(update)
-    return update
+    jsonUpdate = json.loads(update)
+
+    print(jsonUpdate)
+
+
 
 ##------------------------EXECUTE------------------------##
 
-#sendMessage("U ma nigga fag" , pcmstrcID)
+sendMessage("chema is a nigger (test)" , pcmstrcID)
 
-getUpdate()
+#getUpdate()
