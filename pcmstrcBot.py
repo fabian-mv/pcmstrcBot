@@ -58,6 +58,6 @@ def getUpdate():
 
 ##------------------------EXECUTE------------------------##
 
-sendMessage("shit garden" , serruchoID)
+sendMessage("you are a cuck LOL" , davidID)
 
 #getUpdate()
